@@ -1,10 +1,10 @@
 # snort
 
-## ¿Que es snort "?"2
+## ¿Que es snort ?
 
 Snort es un Sistema de Detección de Intrusos (IDS) basado en red (IDSN) open source.
 
-## Características 
+## Características
 
 Implementa un motor de detección de Ataques y barrido de puertos que permite:
 Registrar, alertar y responder ante cualquier anomalía previamente definida como patrones 
