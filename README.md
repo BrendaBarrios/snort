@@ -28,7 +28,7 @@ Todo esto en tiempo real. Funciona bajo plataformas Windows y UNIX/Linux.
 * Tener una capacidad de prevención. 
 * Genera tipos de respuesta a ataques.
 * Aumenta seguridad.
-</p>
+</p> </div>
 
 
 
