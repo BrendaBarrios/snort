@@ -85,10 +85,72 @@ Una vez que identifiques el nombre de la interfaz debes colocarlo en la pantalla
 
 ![ Imagen 1.Configurando snort ](./resources_page/8.jpg) 
 
-## 9. Te preguntara el número de ocurrencias en las que te enviara el correo electronico colocar 1 .
+## 9. Te preguntara el número de ocurrencias en las que te enviara el correo electronico colocar 1.
 
 ![ Imagen 1.Configurando snort ](./resources_page/9.jpg) 
 
+
+
+# Comprobación de la instalación de snort
+
+La siguiente solo verifica que los paquetes de snort se encuentren instalados y este corriendo en tu maquina.
+
+    vagrant@ubuntu1804:/vagrant_data$ sudo snort
+
+
+    Running in packet dump mode
+
+        --== Initializing Snort ==--
+    Initializing Output Plugins!
+        pcap DAQ configured to passive.
+    Acquiring network traffic from "eth0".
+    Decoding Ethernet
+
+        --== Initialization Complete ==--
+
+            ,,_        -*> Snort! <*-
+            o"  )~   Version 2.9.7.0 GRE (Build 149)
+            ''''    By Martin Roesch & The Snort Team: http://www.snort.org/contact#team
+                    Copyright (C) 2014 Cisco and/or its affiliates. All rights reserved.
+                    Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+                    Using libpcap version 1.8.1
+                    Using PCRE version: 8.39 2016-06-14
+                    Using ZLIB version: 1.2.11
+
+    Commencing packet processing (pid=4257)
+    04/25-04:55:38.372041 10.0.2.15:22 -> 10.0.2.2:43284
+    TCP TTL:64 TOS:0x10 ID:45465 IpLen:20 DgmLen:380 DF
+    ***AP*** Seq: 0xAEEA228B  Ack: 0xB45D04D6  Win: 0x8F70  TcpLen: 20
+    =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+    ===============================================================================
+    Run time for packet processing was 4.101934 seconds
+    Snort processed 7 packets.
+    Snort ran for 0 days 0 hours 0 minutes 4 seconds
+    Pkts/sec:            1
+    ===============================================================================
+    Memory usage summary:
+    Total non-mmapped bytes (arena):       786432
+    Bytes in mapped regions (hblkhd):      12906496
+    Total allocated space (uordblks):      686720
+    Total free space (fordblks):           99712
+    Topmost releasable block (keepcost):   96432
+    ===============================================================================
+    Breakdown by protocol (includes rebuilt packets):
+            Eth:            7 (100.000%)
+        VLAN:            0 (  0.000%)
+            IP4:            7 (100.000%)
+        Frag:            0 (  0.000%)
+        ICMP:            0 (  0.000%)
+            UDP:            0 (  0.000%)
+
+    ===============================================================================
+    Snort exiting
+
+Te aparecera lo anterior que es el trafico de la interfaz de red  y abajo te apareceran estadisticas de los paquetes.
+
+
+Si te aparece lo anterior tu instalación ha sido exitosa.
 
 
 
