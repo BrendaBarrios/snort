@@ -1,9 +1,8 @@
 # SNORT
 
-![Imagen 1.Snort](https://www.stickpng.com/assets/images/586e6b2cc2d41da57a33ca0d.png)
+<img src="https://www.stickpng.com/assets/images/586e6b2cc2d41da57a33ca0d.png" style="center;"/>
 
-
-## ¿Que es snort ?
+## ¿Que es snort?
 
 Snort es un Sistema de Detección de Intrusos (IDS) basado en red (IDSN) open source.
 
