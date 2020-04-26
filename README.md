@@ -185,6 +185,22 @@ Por este motivo para los ejercicios solo se dejaran los necesarios y para no bor
 </p>
 
 
+## Herramientas complementarioas para snort
+
+<img src="./recursos/11.jpeg" style="float:right;" height="180"/>
+
+
+Existen varias herramientas que funcionan con el uso de snort mencionaremos alguna de ellos.
+
+__Spade:__ Módulo detector de Anomalías.
+
+__Inline Snort :__ Sistema de Prevención de Intrusos.
+
+__BRO :__ NIDS que usa una gran variedad de módulos para el análisis de protocolos.
+
+__ACID :__ Consola web para visualizar los registros de Snort
+
+
 ## Ventajas 
 
 * __Puede funcionar como sniffer__:
