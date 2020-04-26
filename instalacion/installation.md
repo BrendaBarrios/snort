@@ -15,14 +15,14 @@ Con este comando se configurara automaticamente los directorios y archivos neces
 
 ## 3. En la siguiente pantalla responde OK.
 
-![ Imagen 1.Configurando snort ](./resources_page/2.jpg) 
+![ Imagen 1.Configurando snort ](./imagenes/2.jpg) 
 
 ## 4. Revisa la interfaz de red que esta ocupando en tu equipo porque es snort pide el nombre de la interfaz.
 
  La interfaz de red  sirve para conectar a una computadora a la red y posibilita compartir recursos entre dos computadores.
 
 
-![ Imagen 1.Configurando snort ](./resources_page/4.jpg) 
+![ Imagen 1.Configurando snort ](./imagenes/4.jpg) 
 
 En caso de que no conozcas tu interfaz de red haz lo siguiente.
 
@@ -70,24 +70,24 @@ Una vez que identifiques el nombre de la interfaz debes colocarlo en la pantalla
 
 ## 5. Te aparecera una ventana informativa sobre el rango de las IPs aqui solo dale OK.
 
-![ Imagen 1.Configurando snort ](./resources_page/5.jpg) 
+![ Imagen 1.Configurando snort ](./imagenes/5.jpg) 
 
 ## 6. Te pedira el rango de las ip que utilizara aqui ,dejaremos como aparece solo dale OK.
 
-![ Imagen 1.Configurando snort ](./resources_page/6.jpg) 
+![ Imagen 1.Configurando snort ](./imagenes/6.jpg) 
 
 ## 7. Te preguntara si deseas resivir alertas a tu correo electronico para enviar los logs de snort. ELige la opción YES.
 
-![ Imagen 1.Configurando snort ](./resources_page/7.jpg) 
+![ Imagen 1.Configurando snort ](./imagenes/7.jpg) 
 
 
 ## 8. Coloca tu email.
 
-![ Imagen 1.Configurando snort ](./resources_page/8.jpg) 
+![ Imagen 1.Configurando snort ](./imagenes/8.jpg) 
 
 ## 9. Te preguntara el número de ocurrencias en las que te enviara el correo electronico colocar 1.
 
-![ Imagen 1.Configurando snort ](./resources_page/9.jpg) 
+![ Imagen 1.Configurando snort ](./imagenes/9.jpg) 
 
 
 
@@ -150,7 +150,7 @@ La siguiente solo verifica que los paquetes de snort se encuentren instalados y 
 Te aparecera lo anterior que es el trafico de la interfaz de red  y abajo te apareceran estadisticas de los paquetes.
 
 
-Si te aparece lo anterior tu instalación ha sido exitosa.
+Si te aparece lo anterior tu instalación ha sido exitosa :) .
 
 
 

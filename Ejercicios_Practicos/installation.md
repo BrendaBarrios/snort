@@ -47,6 +47,11 @@ Se ejecutara el comando y cuando este listo aparecera un mensaje que diga termin
 
 # Ejercicios
 
+Para la realización de estos ejercicion se esta trabajando con una maquina virtual en linux la cual tiene snort.
+
+
+
+## Ejercicios # 1 Ping al 
 
 
 

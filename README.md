@@ -198,10 +198,13 @@ __Inline Snort :__ Sistema de Prevención de Intrusos.
 
 __BRO :__ NIDS que usa una gran variedad de módulos para el análisis de protocolos.
 
-__ACID :__ Consola web para visualizar los registros de Snort
+__ACID :__ Consola web para visualizar los registros de Snort.
 
 
 ## Ventajas 
+
+<img src="https://img.stackshare.io/service/8365/_lJGY-m__400x400.jpg" style="float:left;"  height="250"/>
+
 
 * __Puede funcionar como sniffer__:
 Podemos ver en consola y en tiempo real qué ocurre en nuestra red, todo nuestro tráfico
@@ -215,3 +218,6 @@ Así se sabe cuándo, de dónde y cómo se produjo el ataque.
 
 * __Funciona con otras herramientas__:
 En función de otras herramientas genera más funcionalidades por ejemplo en función con mysql va guardando los registros en la base de datos.
+
+
+
