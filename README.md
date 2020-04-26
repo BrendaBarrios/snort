@@ -95,9 +95,7 @@ __La estructura de una regla es la siguiente :__
 
 Las reglas que sean usadas por snort deberan llevar la estructura anterior. En el archivo _local.rules_ las vas a observar escritas de la siguiente manera:
 
-<div style="text-align:center;">
-
-<table >
+<table  width="100%" height="100%">
 <tr style="text-align : center;">
 <td style="background-color :#aa00ff;" > Acción</td>
 <td style="background-color :#aa00ff;"> Protocolo</td>
@@ -118,8 +116,6 @@ Las reglas que sean usadas por snort deberan llevar la estructura anterior. En e
 <td>53</td>
 </tr></table>
 
-
-</div>
 
 
 Donde se encuentre un  * no es un campo obligtorio.
