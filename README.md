@@ -44,7 +44,7 @@ Es uno de los más usados y dispone de una gran cantidad de filtros o patrones y
 
 ## Elementos de Snort
 
-<img src="https://lh3.googleusercontent.com/proxy/H4Ssz4fcMUWhhdKeuFaLm3gvPXqAigg29Wg8HYcLumuW6FeC1hIuQ6679QS59N0wzwuNqSpQpsCfuXCqAeEkIS9Gjv60rWL4HKV2CIw" style="float:right;" height="260"/>
+<img src="https://lh3.googleusercontent.com/proxy/H4Ssz4fcMUWhhdKeuFaLm3gvPXqAigg29Wg8HYcLumuW6FeC1hIuQ6679QS59N0wzwuNqSpQpsCfuXCqAeEkIS9Gjv60rWL4HKV2CIw" style="float:right;" height="280"/>
 
 
 El motor de Snort se divide en los siguientes componentes:
