@@ -20,10 +20,7 @@ Todo esto en tiempo real. Funciona bajo plataformas Windows y UNIX/Linux.
 
 ## Permite :
 
-
-
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTS7z52iiwtq8m8pvL_2JSdtvHgSL2sAS4O7pNcG4Wsw2nFv-bz&usqp=CAU" style="float:right;" height="140"/>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTS7z52iiwtq8m8pvL_2JSdtvHgSL2sAS4O7pNcG4Wsw2nFv-bz&usqp=CAU" style="float:right;" height="160"/>
 
 * Al tráfico malicioso, darlo de baja. 
 
