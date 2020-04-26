@@ -187,7 +187,7 @@ Por este motivo para los ejercicios solo se dejaran los necesarios y para no bor
 
 ## Herramientas complementarioas para snort
 
-<img src="./recursos/11.jpeg" style="float:right;" height="180"/>
+<img src="./recursos/13.jpeg" style="float:right;" height="180"/>
 
 
 Existen varias herramientas que funcionan con el uso de snort mencionaremos alguna de ellos.
