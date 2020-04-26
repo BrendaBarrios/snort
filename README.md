@@ -5,7 +5,10 @@
 <img src="https://www.stickpng.com/assets/images/586e6b2cc2d41da57a33ca0d.png" style="center;"/>
 
 </p>
-## ¿Que es snort?
+
+
+
+## ¿Qué es snort?
 
 Snort es un Sistema de Detección de Intrusos (IDS) basado en red (IDSN) open source.
 
@@ -15,7 +18,7 @@ Snort es un Sistema de Detección de Intrusos (IDS) basado en red (IDSN) open so
 
 Implementa un motor de detección de ataques y barrido de puertos que nos ayuda a :
 registrar, alertar y responder ante cualquier anomalía previamente definida como patrones 
-que corresponden a ataques, barridos, intentos aprovechar alguna vulnerabilidad y análisis de protocolos.
+que corresponden a ataques, intentos aprovechar alguna vulnerabilidad y análisis de protocolos.
 
 Todo esto en tiempo real. Funciona bajo plataformas Windows y UNIX/Linux.
 
@@ -34,12 +37,15 @@ Todo esto en tiempo real. Funciona bajo plataformas Windows y UNIX/Linux.
 
 
 
-## ¿Porque es más usado?
+## ¿Porqué es más usado?
 
 Es uno de los más usados y dispone de una gran cantidad de filtros o patrones ya predefinidos, así como actualizaciones constantes ante casos de ataques.Utilizado por empresas debido a que pueden configurar sus propias reglas y solo usan las necesarias para ellos.
 
 
 ## Elementos de Snort
+
+<img src="https://lh3.googleusercontent.com/proxy/H4Ssz4fcMUWhhdKeuFaLm3gvPXqAigg29Wg8HYcLumuW6FeC1hIuQ6679QS59N0wzwuNqSpQpsCfuXCqAeEkIS9Gjv60rWL4HKV2CIw" style="float:right;" height="260"/>
+
 
 El motor de Snort se divide en los siguientes componentes:
 
@@ -67,29 +73,41 @@ Define que, como, donde se guardan las alertas de los paquetes.
 
 # Reglas de Snort
 
-Las reglas o firmas son los patrones que se buscan dentro de los paquetes de datos.Estas son escritas en el archivo  _local.rules_.
-Cada quie coloca las que crea necesarias.Este archivo sera editado cada que agregues una regla.
+Las reglas o firmas son los patrones que se buscan dentro de los paquetes de datos. Estas son escritas en el archivo  _local.rules_.
+Cada quien coloca las que cree necesarias.Este archivo será editado cada que necesites añadir una regla.
 
 
-Son utilizadas por el motor de detección para comparar los paquetes recibidos y generar 
-las alertas en caso de existir coincidencia entre el contenido de los paquetes y las firmas.
+Son utilizadas por el motor de detección para __comparar los paquetes recibidos y generar 
+las alertas__ en caso de existir coincidencia entre el contenido de los paquetes y las firmas.
 
-La estructura de una regla es la siguiente :
+__La estructura de una regla es la siguiente :__
 
-![Estructura de una regla en snort](./11.jpg) 
+
+
+
+<p style="text-align : center;">
+
+<img src="./recursos/11.jpg" style="center;"/>
+
+</p>
+
+
 
 Las reglas que sean usadas por snort deberan llevar la estructura anterior. En el archivo _local.rules_ las vas a observar escritas de la siguiente manera:
 
-<table class="egt">
-<tr>
-<td>Acción</td>
-<td>Protocolo</td>
-<td>Red Origen</td>
-<td>Puerto origen</td>
-<td>Dirección</td>
-<td>Red destino</td>
-<td>*Puerto destino</td>
+<div style="text-align:center;">
+
+<table >
+<tr style="text-align : center;">
+<td style="background-color :#aa00ff;" > Acción</td>
+<td style="background-color :#aa00ff;"> Protocolo</td>
+<td style="background-color :#aa00ff;" > Red Origen</td>
+<td style="background-color :#aa00ff;" >Puerto origen</td>
+<td style="background-color :#aa00ff;">Dirección</td>
+<td style="background-color :#aa00ff;">Red destino</td>
+<td style="background-color :#aa00ff;">*Puerto destino</td>
 </tr>
+
 <tr>
 <td>alert</td>
 <td>tcp</td>
@@ -100,9 +118,13 @@ Las reglas que sean usadas por snort deberan llevar la estructura anterior. En e
 <td>53</td>
 </tr></table>
 
+
+</div>
+
+
 Donde se encuentre un  * no es un campo obligtorio.
 
-Y el significado de cada campo es el siguiente:
+__Y el significado de cada campo es el siguiente:__
 
 • __Protocolo__. Permite establecer el protocolo de comunicaciones que se va a utilizar. Los posibles valores son: TCP, UDP, IP e ICMP.
 
@@ -145,27 +167,26 @@ para baja.
 
 
     alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"ping al servidor"; sid:10000001; rev:001;)
+    
+
+# Archivo Snort.conf
 
 En el archivo Snort.conf añade y elimina los plugins o paquetes a utilizar.
 
+Dependiendo de las reglas utilizadas debes de importar adecuadamente la regla en este archivo para su correcto funcionamiento.
+
+Este archivo cuando es instalado snort contiene todos los plugins pero es recomendable solo dejar importado los que necesitas y borrar todos los demás includes porque podria dar errores al momento de ejecutar.
+
+Por este motivo para los ejercicios solo se dejaran los necesarios y para no borrar mnualmente utilizamos un script que eliminara lo que no necesitamos para la realización de la practica.
 
 
 
 
+<p style="text-align : center;">
 
+<img src="https://lh3.googleusercontent.com/HddqWxh9YUmU4qOtAkj14OZqRI5lzl2E-8_gpFTjNLyK-9cYT68powz-hGvsd8rfarg-hJEk3eDA81TmNh1h3lvx9LRROG-IeSrSWLTNoHKZ8iiKzNIsh2BS173lZQnu89YWgnLO" style="center;"  height="300"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
+</p>
 
 
 ## Ventajas 
@@ -179,3 +200,6 @@ Permite guardar en un archivo los logs para su posterior análisis, un análisis
 * __Funciona como un NIDS__:
 Cuando un paquete coincide con algún patrón establecido en las reglas de configuración, se loguea. 
 Así se sabe cuándo, de dónde y cómo se produjo el ataque.
+
+* __Funciona con otras herramientas__:
+En función de otras herramientas genera más funcionalidades por ejemplo en función con mysql va guardando los registros en la base de datos.
