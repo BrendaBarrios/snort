@@ -22,7 +22,6 @@ Todo esto en tiempo real. Funciona bajo plataformas Windows y UNIX/Linux.
 
 
 
-<div>
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTS7z52iiwtq8m8pvL_2JSdtvHgSL2sAS4O7pNcG4Wsw2nFv-bz&usqp=CAU" style="float:right;" height="140"/>
 
@@ -33,9 +32,6 @@ Todo esto en tiempo real. Funciona bajo plataformas Windows y UNIX/Linux.
 * Genera tipos de respuesta a ataques.
 
 * Aumenta seguridad.
-
-</div>
-
 
 
 
