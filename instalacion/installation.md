@@ -3,13 +3,13 @@
 
 ## 1. Ejecutar la siguiente comando en la consola.
 
-Con este comando se configurara automaticamente los directorios y archivos necesario para el funcionamiento de la herramienta snort.
+Con este comando se configurara automáticamente los directorios y archivos necesario para el funcionamiento de la herramienta snort.
 
 
     vagrant@ubuntu1804:~  sudo apt-get install snort 
 
 
-## 2. Despues de lo anterior te aparecera una pregunta y deberas  responde afirmativamente si deseas continuar con la instalación.
+## 2. Después de lo anterior te aparecera una pregunta responde afirmativamente si deseas continuar con la instalación.
 
     Do you want to continue? [Y/n] Y
 
@@ -17,19 +17,19 @@ Con este comando se configurara automaticamente los directorios y archivos neces
 
 ![ Imagen 1.Configurando snort ](./imagenes/2.jpg) 
 
-## 4. Revisa la interfaz de red que esta ocupando en tu equipo porque es snort pide el nombre de la interfaz.
+## 4. Coloca la interfaz de red que esta ocupando tu equipo.
 
  La interfaz de red  sirve para conectar a una computadora a la red y posibilita compartir recursos entre dos computadores.
 
 
 ![ Imagen 1.Configurando snort ](./imagenes/4.jpg) 
 
-En caso de que no conozcas tu interfaz de red haz lo siguiente.
+__En caso de que no conozcas tu interfaz de red haz lo siguiente.__
 
 
-### 4.1 Abre una nueva terminal en el equipo que se instalara snort.
+### 4.1 Abre una nueva terminal en el equipo que instalaras snort.
 
-Para saber es necesario ejecutar el siguiente comando :
+Para conocerla es necesario ejecutar el siguiente comando :
 
     vagrant@ubuntu1804:~  ifconfig
 
@@ -59,24 +59,22 @@ Para saber es necesario ejecutar el siguiente comando :
         TX packets 22  bytes 2166 (2.1 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-En lo anterior hay 3 interfaces de red, debes elegir la que estes usando en este caso la ip que utilices para obtener 
-salida a internet y por lo regular son las IP que empiezan con 192.168.
+En lo anterior hay 3 interfaces de red, debes elegir la que estes usando en este caso donde se encuentre la ip publica que estas utilizando y por lo regular son las IP que empiezan con 192.168.
 
 En la mayoria de los casos la interfaces utilizadas son eth0 y eth1.
-En caso de que uses wifi u otro debe ser  enp o wl.
 
-Una vez que identifiques el nombre de la interfaz debes colocarlo en la pantalla anterior.En caso que pusieras una interfaz no existente snort te lo indica y darle ok.
+Una vez que identifiques el nombre de la interfaz debes colocarlo en la pantalla anterior y darle ok.En caso que pusieras una interfaz no existente snort te lo indicara.
 
 
-## 5. Te aparecera una ventana informativa sobre el rango de las IPs aqui solo dale OK.
+## 5. Te aparecera una ventana informativa sobre el rango de las IPS aqui elige OK.
 
 ![ Imagen 1.Configurando snort ](./imagenes/5.jpg) 
 
-## 6. Te pedira el rango de las ip que utilizara aqui ,dejaremos como aparece solo dale OK.
+## 6. Te pedira el rango de las ip que utilizara, aqui dejaremos como aparece solo dale OK.
 
 ![ Imagen 1.Configurando snort ](./imagenes/6.jpg) 
 
-## 7. Te preguntara si deseas resivir alertas a tu correo electronico para enviar los logs de snort. ELige la opción YES.
+## 7. Te preguntara si deseas resivir alertas a tu correo electrónico para enviar los logs de snort. ELige la opción YES.
 
 ![ Imagen 1.Configurando snort ](./imagenes/7.jpg) 
 
@@ -85,7 +83,7 @@ Una vez que identifiques el nombre de la interfaz debes colocarlo en la pantalla
 
 ![ Imagen 1.Configurando snort ](./imagenes/8.jpg) 
 
-## 9. Te preguntara el número de ocurrencias en las que te enviara el correo electronico colocar 1.
+## 9. Te preguntara el número de ocurrencias en las que te enviara el correo electrónico colocar 1.
 
 ![ Imagen 1.Configurando snort ](./imagenes/9.jpg) 
 
@@ -147,7 +145,7 @@ La siguiente solo verifica que los paquetes de snort se encuentren instalados y 
     ===============================================================================
     Snort exiting
 
-Te aparecera lo anterior que es el trafico de la interfaz de red  y abajo te apareceran estadisticas de los paquetes.
+Te aparecera lo anterior que es el tráfico de la interfaz de red  y abajo te apareceran estadísticas de los paquetes.
 
 
 Si te aparece lo anterior tu instalación ha sido exitosa :) .
