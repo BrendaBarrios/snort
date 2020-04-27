@@ -1,7 +1,7 @@
 # Instalación de snort en linux
 
 
-## 1. Ejecutar la siguiente comando en la consola.
+## 1. Ejecutar el siguiente comando en la consola.
 
 Con este comando se configurara automáticamente los directorios y archivos necesario para el funcionamiento de la herramienta snort.
 
@@ -59,7 +59,7 @@ Para conocerla es necesario ejecutar el siguiente comando :
         TX packets 22  bytes 2166 (2.1 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-En lo anterior hay 3 interfaces de red, debes elegir la que estes usando en este caso donde se encuentre la ip publica que estas utilizando y por lo regular son las IP que empiezan con 192.168.
+En lo anterior hay 3 interfaces de red, debes elegir la que estes usando en este caso donde se encuentre la ip publica que estas utilizando y por lo regular son las IP que _empiezan con 192.168._
 
 En la mayoria de los casos la interfaces utilizadas son eth0 y eth1.
 
@@ -74,7 +74,7 @@ Una vez que identifiques el nombre de la interfaz debes colocarlo en la pantalla
 
 ![ Imagen 4.Escribiendo rango de ip.](./imagenes/6.jpg) 
 
-## 7. Te preguntara si deseas resivir alertas a tu correo electrónico para enviar los logs de snort. ELige la opción YES.
+## 7. Te preguntara si deseas resivir alertas a tu correo electrónico para enviar los logs de snort. Elige la opción YES.
 
 ![ Imagen 5.Pantalla informativa para enviar logs.](./imagenes/7.jpg) 
 
@@ -83,7 +83,7 @@ Una vez que identifiques el nombre de la interfaz debes colocarlo en la pantalla
 
 ![ Imagen 6.Colocando email. ](./imagenes/8.jpg) 
 
-## 9. Te preguntara el número de ocurrencias en las que te enviara el correo electrónico colocar 1.
+## 9. Preguntara el número de ocurrencias en las que te enviara el correo electrónico colocar 1.
 
 ![ Imagen 7.Colocando ocurrencias. ](./imagenes/9.jpg) 
 
