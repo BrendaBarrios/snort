@@ -15,14 +15,14 @@ Con este comando se configurara automáticamente los directorios y archivos nece
 
 ## 3. En la siguiente pantalla responde OK.
 
-![ Imagen 1.Configurando snort ](./imagenes/2.jpg) 
+![ Imagen 1.Pantalla informativa de interfaz de red. ](./imagenes/2.jpg) 
 
 ## 4. Coloca la interfaz de red que esta ocupando tu equipo.
 
  La interfaz de red  sirve para conectar a una computadora a la red y posibilita compartir recursos entre dos computadores.
 
 
-![ Imagen 1.Configurando snort ](./imagenes/4.jpg) 
+![ Imagen 2.Colocando interfaz de red. ](./imagenes/4.jpg) 
 
 __En caso de que no conozcas tu interfaz de red haz lo siguiente.__
 
@@ -68,24 +68,24 @@ Una vez que identifiques el nombre de la interfaz debes colocarlo en la pantalla
 
 ## 5. Te aparecera una ventana informativa sobre el rango de las IPS aqui elige OK.
 
-![ Imagen 1.Configurando snort ](./imagenes/5.jpg) 
+![ Imagen 3.Pantalla informativa de ips en snort. ](./imagenes/5.jpg) 
 
 ## 6. Te pedira el rango de las ip que utilizara, aqui dejaremos como aparece solo dale OK.
 
-![ Imagen 1.Configurando snort ](./imagenes/6.jpg) 
+![ Imagen 4.Escribiendo rango de ip.](./imagenes/6.jpg) 
 
 ## 7. Te preguntara si deseas resivir alertas a tu correo electrónico para enviar los logs de snort. ELige la opción YES.
 
-![ Imagen 1.Configurando snort ](./imagenes/7.jpg) 
+![ Imagen 5.Pantalla informativa para enviar logs.](./imagenes/7.jpg) 
 
 
 ## 8. Coloca tu email.
 
-![ Imagen 1.Configurando snort ](./imagenes/8.jpg) 
+![ Imagen 6.Colocando email. ](./imagenes/8.jpg) 
 
 ## 9. Te preguntara el número de ocurrencias en las que te enviara el correo electrónico colocar 1.
 
-![ Imagen 1.Configurando snort ](./imagenes/9.jpg) 
+![ Imagen 7.Colocando ocurrencias. ](./imagenes/9.jpg) 
 
 
 
