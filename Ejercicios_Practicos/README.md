@@ -20,15 +20,15 @@
 
     vagrant@ubuntu1804:~ ./setup.sh
 
-### 2.3 Colocaras la ip publica que esta en la interfaz de red que estamos usando.
+### 2.3 Colocaras la ip pública que esta en la interfaz de red que estamos usando.
 
-La interfaz de red en este mismo repositorio apartado instalación te dijimos como localizarla ahora de esta misma interfaz obten la ip que aparece como un apartado y recuerda generalmente comienzan con 192.168.x.x .
+De la imterfaz de red usada localizaremos  la ip que aparece dentro de las características de la interfaz y recuerda generalmente comienzan con 192.168.x.x .
 
 
     vagrant@ubuntu1804:/vagrant_data$ ./setup_conf.sh
     Escribe la ip de tu equipo:192.168.33.10
 
-Se ejecutara el comando y cuando este listo aparecera un mensaje que diga terminando edición del archivo snort.conf.
+Se ejecutara el comando y cuando este listo aparecera un _mensaje que diga terminando edición del archivo snort.conf._
 
 
 
@@ -40,12 +40,14 @@ Se ejecutara el comando y cuando este listo aparecera un mensaje que diga termin
 
 ## 4. Ubicate donde se encuentra el archivo que descargaste anteriormente y ejecuta lo siguiente.
 
-### 2.1 Otorgaremos permisos para que se pueda ejecutar.
+### 4.1 Se Otorgan permisos para que se pueda ejecutar.
 
     vagrant@ubuntu1804:~  chmod u+x conf_localRules.sh
 
+_Para terminar la ejecución de snort usa __ctrl + c__ se tardara un poco en cerrar._
 
-### 2.2 Ejecutaremos el script en nuestra maquina.
+
+### 4.2 Ejecutaremos el script en nuestra maquina.
 
 
     vagrant@ubuntu1804:~ ./conf_localRules.sh
@@ -65,19 +67,19 @@ Si deseas más información de las opciones que se utilizan ejecuta el siguiente
 
 __IMPORTANTE__
 
-En el ejemplo anterior __eth1 va a cambiar dependiendo de la interfaz que utilices__ cada uno en su maquina que es donde esta la ip pública que usamos.En caso contrario snort no detectara las reglas.
+En el ejemplo anterior __eth1 va a cambiar dependiendo de la interfaz que utilices__ recuerda que es donde esta la ip pública(192.168.x.x)  que usamos.En caso contrario snort no detectara las reglas.
 
 
 # Ejercicios 
 
 
-__Debes tener ejecutando snort consola las reglas que se muestran ya las tienes  escritas en el archivo de reglas con los scripts ejecutados ya no deberas hacer nada solo ver como hacerlas funcionar .__
+__Debes tener ejecutando snort en consola, las reglas que se muestran ya las tienes  escritas en el archivo de _local.rules_ con los scripts ejecutados ya no deberás escribirlas solo ver como hacerlas funcionar .__
 
 __Snort detecta una regla si coincide mandara una alerta a la consola de snort__
 
 # 1. Ping al servidor.
 
-La siguiente intrucción detecta un ping desde una maquina externa hacia tu servidor o maquina.
+La siguiente instrucción detecta un ping desde una maquina externa hacia tu servidor o maquina.
 
     alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"ping al servidor"; sid:10000001; rev:001;)
 
@@ -89,10 +91,10 @@ Por ejemplo si en una maquina virtual tienes snort puedes abrir la terminal de t
 
 _Tu deberas cambiar la ip pública por la que tu estas usando ,es decir la que utiliza en la interfaz de red que colocaste al momento de instalar snort._
 
-## Revisa la terminal en la que tienes ejecutando snort para revisar la alerta que te manda.
+## Revisa la terminal en la que tienes ejecutando snort para ver la alerta del ping.
 
 
-Te mostrara que snort ya esta detectando el paquete te aparecera una alerta en la consola con el mensaje de ping al servidor.
+Mostrara la alerta con el mensaje de ping al servidor.
 
 
 
@@ -117,12 +119,12 @@ Por ejemplo si en una maquina virtual tienes snort puedes abrir la terminal de t
     bodhi@yasmin:~$ ssh usuario@192.168.33.10
     
 
-_Tu deberas cambiar la ip pública por la que tu estas usando ,es decir la que utiliza en la interfaz de red que colocaste al momento de instalar snort y el usuario puedes o dejarlo asi solo para que veas la._
+_Tu deberás cambiar la ip pública por la que tu estas usando ,es decir la que utiliza en la interfaz de red que colocaste al momento de instalar snort y el usuario puedes o dejarlo asi solo para que veas la._
 
-## Revisa la terminal en la que tienes ejecutando snort para revisar la alerta que te manda.
+## Revisa la terminal en la que tienes ejecutando snort para verificar que esta mandando la alerta.
 
 
-Te mostrara que snort ya esta detectando el paquete te aparecera una alerta en la consola con el mensaje de ssh al servidor.
+Te mostrara que snort ya esta detectando el paquete por medio de la siguiente alerta.
 
 
 
@@ -133,17 +135,17 @@ Te mostrara que snort ya esta detectando el paquete te aparecera una alerta en l
     
 # 3. Regla para detectar la entrada  HTTP
 
-Esta regla detecta cuando te estas conectando por http,cuando estas accediendo a una página web.
+Esta regla detecta cuando se conecta a http,cuando estas accediendo a una página web.
 
     alert tcp any any -> $HOME_NET 80 (msg:"Regla del http"; sid:10000003; rev:003;)
 
 ## Abre una nueva terminal en el equipo donde esta instalado snort
 
-Ejecuta el siguiente comando es para generar la página que python crea automáticamente la cual usaremos de ejemplo para esta alerta.
+Ejecuta el siguiente comando es para generar la página que python crea automáticamente, la cual usaremos de ejemplo para esta alerta.
 
     vagrant@ubuntu1804:~$ sudo python3 -m http.server --bind 0.0.0.0 80
 
-Una vez que ejecutas este comando podras verificar la página en tu navegador colocando tu ip publica y veras lo siguiente.
+Una vez que ejecutas este comando podras verificar la página en tu navegador colocando tu ip pública y mostrara lo siguiente.
 
 <p style="text-align : center;">
 
@@ -151,7 +153,7 @@ Una vez que ejecutas este comando podras verificar la página en tu navegador co
 
 </p>
 
-Enseguida dirigete a la consola de snort donde veras las siguiente alerta :
+## Enseguida dirigete a la consola de snort donde te mostrara las siguiente alerta :
 
     04/27-20:59:26.280661  [**] [1:10000003:3] Regla del http [**] [Priority: 0] {TCP} 192.168.33.1:53704 -> 192.168.33.10:80
     04/27-20:59:26.285119  [**] [1:10000003:3] Regla del http [**] [Priority: 0] {TCP} 192.168.33.1:53704 -> 192.168.33.10:80
@@ -173,7 +175,7 @@ Ejecuta el siguiente comando es para generar la página que python crea automát
 
     vagrant@ubuntu1804:~$ sudo python3 -m http.server --bind 0.0.0.0 80
 
-Para obtener la alerta en snort coloca la siguiente url en tu navegador.
+## Para obtener la alerta en snort coloca la siguiente url en tu navegador.
 
 <p style="text-align : center;">
 
@@ -205,12 +207,13 @@ Esta regla es parecida a la anterior solo cambia el puerto que es 3306 este perm
 
 ## Abre una nueva terminal en el equipo donde esta instalado snort
 
-Seguiremos usando la página que crean python de http por defecto. Para hacerla funcionar debes ejecutar el siguiente comando:
+Seguiremos usando la página que crean python de http por defecto. Para hacerla funcionar debés ejecutar el siguiente comando:
 
 
     vagrant@ubuntu1804:~$ sudo python3 -m http.server --bind 0.0.0.0 80
 
-Enseguida coloca en tu navegador lo siguiente :
+## Enseguida coloca en tu navegador lo siguiente :
+
 <p style="text-align : center;">
 
 <img src="./imagenes/3.jpg" style="center;"/>
