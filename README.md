@@ -228,8 +228,8 @@ En función de otras herramientas genera más funcionalidades por ejemplo en fun
 ## Si quieres ver la instalación ve al siguiente link.
 
 
-[link instalación snort ](https://brendabarrios.github.io/snort/instalacion/)              :point_left:
+[link instalación snort ](https://brendabarrios.github.io/snort/instalacion/)   :point_left: :+1: :smiley:           
 
-## Si quieres ir a la practica ve al siguiente link.   :point_down:
+## Si quieres ir a la practica ve al siguiente link.   :
 
-[link instalación snort ](https://brendabarrios.github.io/snort/Ejercicios_Practicos/) 
+[link ejercicios de snort ](https://brendabarrios.github.io/snort/Ejercicios_Practicos/) :point_left: :+1: :smiley: 

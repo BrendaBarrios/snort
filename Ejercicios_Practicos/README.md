@@ -77,7 +77,7 @@ __Debes tener ejecutando snort en consola, las reglas que se muestran ya las tie
 
 __Snort detecta una regla si coincide mandara una alerta a la consola de snort__
 
-# <span style="color:#1b5e20"> 1. Ping al servidor.</span>
+# <span style="color:#0d47a1"> 1. Ping al servidor.</span>
 
 
 
@@ -109,7 +109,7 @@ Mostrara la alerta con el mensaje de ping al servidor.
 
 
 
-# <span style="color:#1b5e20"> 2. Conexión ssh</span>
+# <span style="color:#0d47a1"> 2. Conexión ssh</span>
 
 La instrucción detecta cuando algun usuario intenta conectarse por ssh al servidor.
 
@@ -135,7 +135,7 @@ Te mostrara que snort ya esta detectando el paquete por medio de la siguiente al
     04/27-20:04:46.151672  [**] [1:1000005:5] Detectando conexión por ssh [**] [Priority: 0] {TCP} 192.168.33.1:38816 -> 192.168.33.10:22
     04/27-20:04:46.152637  [**] [1:1000005:5] Detectando conexión por ssh [**] [Priority: 0] {TCP} 192.168.33.1:38816 -> 192.168.33.10:22
     
-# <span style="color:#1b5e20"> 3. Regla para detectar la entrada  HTTP </span>
+# <span style="color:#0d47a1"> 3. Regla para detectar la entrada  HTTP </span>
 
 Esta regla detecta cuando se conecta a http,cuando estas accediendo a una página web.
 
@@ -163,7 +163,7 @@ Una vez que ejecutas este comando podras verificar la página en tu navegador co
 
 
 
-# <span style="color:#1b5e20"> 4. Regla para detectar que entran al admin  </span>
+# <span style="color:#0d47a1"> 4. Regla para detectar que entran al admin  </span>
 
 
 
@@ -201,7 +201,7 @@ Como estamos accediendo a una página http y al la url /admin encontrara que con
 
 
 
-# <span style="color:#1b5e20"> 5. Regla para detectar intruso en la base de datos.  </span>
+# <span style="color:#0d47a1"> 5. Regla para detectar intruso en la base de datos.  </span>
 
 
 
