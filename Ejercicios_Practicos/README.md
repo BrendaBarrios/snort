@@ -237,7 +237,7 @@ La alerta que te muestra es la siguente:
 
     vagrant@ubuntu1804:/$ cd /etc/snort/rules
 
-    Y abrir el archivo que modificaras
+Y abrir el archivo que modificaras
     
     vagrant@ubuntu1804:/etc/snort/rules$ sudo nano local.rules
 
@@ -246,7 +246,7 @@ La alerta que te muestra es la siguente:
 
     vagrant@ubuntu1804:/$ cd /etc/snort
 
-    Y abrir el siguiente archivo que editaras :
+ Y abrir el siguiente archivo que editaras :
 
     vagrant@ubuntu1804:/$ cd /etc/snort
 
