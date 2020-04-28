@@ -24,7 +24,7 @@ Con este comando se configurara automáticamente los directorios y archivos nece
 
 ![ Imagen 2.Colocando interfaz de red. ](./imagenes/4.jpg) 
 
-__En caso de que no conozcas tu interfaz de red haz lo siguiente.__
+## En caso de que no conozcas tu interfaz de red haz lo siguiente.
 
 
 ### 4.1 Abre una nueva terminal en el equipo que instalaras snort.
@@ -59,14 +59,14 @@ Para conocerla es necesario ejecutar el siguiente comando :
         TX packets 22  bytes 2166 (2.1 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-En lo anterior hay 3 interfaces de red, debes elegir la que estes usando en este caso donde se encuentre la ip publica que estas utilizando y por lo regular son las IP que _empiezan con 192.168._
+En lo anterior hay 3 interfaces de red, debes elegir la que uses, en este caso donde se encuentre la ip publica que estas utilizando y por lo regular son las IP que _empiezan con 192.168._
 
 En la mayoria de los casos la interfaces utilizadas son eth0 y eth1.
 
 Una vez que identifiques el nombre de la interfaz debes colocarlo en la pantalla anterior y darle ok.En caso que pusieras una interfaz no existente snort te lo indicara.
 
 
-## 5. Te aparecera una ventana informativa sobre el rango de las IPS aqui elige OK.
+## 5. Te aparecera una ventana informativa sobre el rango de las IPS solo ellige OK.
 
 ![ Imagen 3.Pantalla informativa de ips en snort. ](./imagenes/5.jpg) 
 
@@ -147,6 +147,7 @@ La siguiente solo verifica que los paquetes de snort se encuentren instalados y 
 
 Te aparecera lo anterior que es el tráfico de la interfaz de red  y abajo te apareceran estadísticas de los paquetes.
 
+__Para cerrar snort presiona las teclas ctrl + c tardara un poco en cerrar.__
 
 Si te aparece lo anterior tu instalación ha sido exitosa :) .
 

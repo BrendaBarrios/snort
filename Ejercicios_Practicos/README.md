@@ -85,7 +85,7 @@ La siguiente instrucción detecta un ping desde una maquina externa hacia tu ser
 
 ## Debes abrir una terminal donde no este instalado snort.
 
-Por ejemplo si en una maquina virtual tienes snort puedes abrir la terminal de tu equipo original ya sea linux o windows y ejecutar el siguiente comando:
+Por ejemplo si en una maquina virtual tienes snort puedes abrir la terminal de tu equipo original ya sea Linux o Windows y ejecutar el siguiente comando:
 
     bodhi@yasmin:~$ ping 192.168.33.10
 
@@ -228,5 +228,24 @@ La alerta que te muestra es la siguente:
     04/28-03:54:49.874529  [**] [1:10000004:4] Alguien intenta entrar a la base de datos [**] [Priority: 0] {TCP} 192.168.33.1:35536 -> 192.168.33.10:3306
 
 
+## Si deseas añadir tus propias reglas locales debes ingresar  a la siguiente directorio.
 
+    vagrant@ubuntu1804:/$ cd /etc/snort/rules
+
+    Y abrir el archivo que modificaras
+    
+    vagrant@ubuntu1804:/etc/snort/rules$ sudo nano local.rules
+
+
+## Al igual si necesitas importar paquetes  ingresa al siguiente dirrectorio.
+
+    vagrant@ubuntu1804:/$ cd /etc/snort
+
+    Y abrir el siguiente archivo que editaras :
+
+    vagrant@ubuntu1804:/$ cd /etc/snort
+
+
+
+Es asi como finalizamos la explicacion de cada uno de los ejercicios de snort
 

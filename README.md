@@ -97,28 +97,33 @@ Las reglas que sean usadas por snort deberan llevar la estructura anterior. En e
 
 <table  width="100%" height="100%">
 <tr style="text-align : center;">
-<td style="background-color :#aa00ff;" > Acción</td>
-<td style="background-color :#aa00ff;"> Protocolo</td>
-<td style="background-color :#aa00ff;" > Red Origen</td>
-<td style="background-color :#aa00ff;" >Puerto origen</td>
-<td style="background-color :#aa00ff;">Dirección</td>
-<td style="background-color :#aa00ff;">Red destino</td>
-<td style="background-color :#aa00ff;">*Puerto destino</td>
+<td style="background-color :#e040fb;" > Acción</td>
+<td style="background-color :#e040fb;"> Protocolo</td>
+<td style="background-color :#e040fb;" > Red Origen</td>
+<td style="background-color :#e040fb;" >Puerto origen</td>
+<td style="background-color :#e040fb;">Dirección</td>
+<td style="background-color :#e040fb;">Red destino</td>
+<td style="background-color :#e040fb;">Puerto destino</td>
+
+<td style="background-color :#e040fb;">msg</td>
+<td style="background-color :#e040fb;">sid</td>
+<td style="background-color :#e040fb;">rev</td>
 </tr>
 
 <tr>
 <td>alert</td>
 <td>tcp</td>
 <td>$EXTERNAL_NET</td>
-<td>any</td>
+<td>  any</td>
 <td>-></td>
 <td>$HOME_NET</td>
 <td>53</td>
+<td> coneción DNS</td>
+<td>10000001</td>
+<td>001</td>
 </tr></table>
 
 
-
-Donde se encuentre un  * no es un campo obligtorio.
 
 __Y el significado de cada campo es el siguiente:__
 
@@ -155,7 +160,7 @@ de las reglas como : y ; deben de colocarse dentro de la opción msg con el car�
 del payload del paquete.
 
 • __sid__:  en combinación con la opción rev, unicamente identifica una regla Snort,
-correlacionando el ID de la regla individual con la revisión de la regla.
+correlacionando el ID de la regla individual con la revisión de la regla.No deben repetirse valores porque marcara un error.
 
 La prioridad es un valor entero, normalmente 1 para prioridad alta, 2 para media y 3
 para baja.
