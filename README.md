@@ -118,7 +118,7 @@ Las reglas que sean usadas por snort deberan llevar la estructura anterior. En e
 <td>-></td>
 <td>$HOME_NET</td>
 <td>53</td>
-<td> coneción DNS</td>
+<td> Conexión DNS</td>
 <td>10000001</td>
 <td>001</td>
 </tr></table>
@@ -225,4 +225,11 @@ Así se sabe cuándo, de dónde y cómo se produjo el ataque.
 En función de otras herramientas genera más funcionalidades por ejemplo en función con mysql va guardando los registros en la base de datos.
 
 
+## Si quieres ver la instalación ve al siguiente link.
 
+
+[link instalación snort ](https://brendabarrios.github.io/snort/instalacion/)              :point_left:
+
+## Si quieres ir a la practica ve al siguiente link.   :point_down:
+
+[link instalación snort ](https://brendabarrios.github.io/snort/Ejercicios_Practicos/) 

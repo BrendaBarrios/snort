@@ -4,7 +4,7 @@
 ## 1. Descarga en tu maquina el script <span style="color:blue">setup_conf.sh </span>  que se encuentra en este repositorio.
 
 
-[link a scrip setup_conf.sh](https://github.com/BrendaBarrios/snort/blob/master/Ejercicios_Practicos/setup_conf.sh)
+[link a scrip setup_conf.sh](https://github.com/BrendaBarrios/snort/tree/master/Ejercicios_Practicos)
 
 
 ## 2. Ubicate donde se encuentra el archivo que descargaste anteriormente y ejecuta lo siguiente.
@@ -36,7 +36,7 @@ Se ejecutara el comando y cuando este listo aparecera un _mensaje que diga termi
 ## 3. Descarga el  script <span style="color:blue"> conf_localRules.sh </span> que se encuentra en este repositorio.
 
 
-[link a scrip conf_localRules.sh](https://github.com/BrendaBarrios/snort/blob/master/Ejercicios_Practicos/conf_localRules.sh)
+[link a scrip conf_localRules.sh](https://github.com/BrendaBarrios/snort/tree/master/Ejercicios_Practicos)
 
 ## 4. Ubicate donde se encuentra el archivo que descargaste anteriormente y ejecuta lo siguiente.
 
@@ -77,7 +77,10 @@ __Debes tener ejecutando snort en consola, las reglas que se muestran ya las tie
 
 __Snort detecta una regla si coincide mandara una alerta a la consola de snort__
 
-# 1. Ping al servidor.
+# <span style="color:#1b5e20"> 1. Ping al servidor.</span>
+
+
+
 
 La siguiente instrucción detecta un ping desde una maquina externa hacia tu servidor o maquina.
 
@@ -106,7 +109,7 @@ Mostrara la alerta con el mensaje de ping al servidor.
 
 
 
-# 2. Conexión ssh
+# <span style="color:#1b5e20"> 2. Conexión ssh</span>
 
 La instrucción detecta cuando algun usuario intenta conectarse por ssh al servidor.
 
@@ -132,8 +135,7 @@ Te mostrara que snort ya esta detectando el paquete por medio de la siguiente al
     04/27-20:04:46.151672  [**] [1:1000005:5] Detectando conexión por ssh [**] [Priority: 0] {TCP} 192.168.33.1:38816 -> 192.168.33.10:22
     04/27-20:04:46.152637  [**] [1:1000005:5] Detectando conexión por ssh [**] [Priority: 0] {TCP} 192.168.33.1:38816 -> 192.168.33.10:22
     
-    
-# 3. Regla para detectar la entrada  HTTP
+# <span style="color:#1b5e20"> 3. Regla para detectar la entrada  HTTP </span>
 
 Esta regla detecta cuando se conecta a http,cuando estas accediendo a una página web.
 
@@ -161,9 +163,9 @@ Una vez que ejecutas este comando podras verificar la página en tu navegador co
 
 
 
+# <span style="color:#1b5e20"> 4. Regla para detectar que entran al admin  </span>
 
 
-# 4. Regla para detectar que entran al admin 
 
 La siguiente regla detecta cuando alguien quiere entrar al administrador de una aplicación , esto es peligroso porque puede entrar a modificara o eliminar información.
 
@@ -198,7 +200,10 @@ Como estamos accediendo a una página http y al la url /admin encontrara que con
 
 
 
-# 5. Regla para detectar intruso en la base de datos.
+
+# <span style="color:#1b5e20"> 5. Regla para detectar intruso en la base de datos.  </span>
+
+
 
 Esta regla es parecida a la anterior solo cambia el puerto que es 3306 este permite el acceso a la base de datos de alguna aplicación. Si algun intruso llega a entrar puede causar grandes daños.
 
