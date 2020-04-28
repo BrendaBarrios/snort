@@ -8,6 +8,7 @@
 
 ### 2.1 Otorgaremos permisos para que se pueda ejecutar.
 
+
     vagrant@ubuntu1804:~  chmod u+x setup_conf.sh
 
 
@@ -124,20 +125,99 @@ Te mostrara que snort ya esta detectando el paquete te aparecera una alerta en l
     04/27-20:04:46.151672  [**] [1:1000005:5] Detectando conexión por ssh [**] [Priority: 0] {TCP} 192.168.33.1:38816 -> 192.168.33.10:22
     04/27-20:04:46.152637  [**] [1:1000005:5] Detectando conexión por ssh [**] [Priority: 0] {TCP} 192.168.33.1:38816 -> 192.168.33.10:22
     
-
+    
 # 3. Regla para detectar la entrada  HTTP
+
+Esta regla detecta cuando te estas conectando por http,cuando estas accediendo a una página web.
 
     alert tcp any any -> $HOME_NET 80 (msg:"Regla del http"; sid:10000003; rev:003;)
 
+## Abre una nueva terminal en el equipo donde esta instalado snort
+
+Ejecuta el siguiente comando es para generar la página que python crea automáticamente la cual usaremos de ejemplo para esta alerta.
+
+    vagrant@ubuntu1804:~$ sudo python3 -m http.server --bind 0.0.0.0 80
+
+Una vez que ejecutas este comando podras verificar la página en tu navegador colocando tu ip publica y veras lo siguiente.
+
+<p style="text-align : center;">
+
+<img src="./imagenes/1.jpg" style="center;"/>
+
+</p>
+
+Enseguida dirigete a la consola de snort donde veras las siguiente alerta :
+
+    04/27-20:59:26.280661  [**] [1:10000003:3] Regla del http [**] [Priority: 0] {TCP} 192.168.33.1:53704 -> 192.168.33.10:80
+    04/27-20:59:26.285119  [**] [1:10000003:3] Regla del http [**] [Priority: 0] {TCP} 192.168.33.1:53704 -> 192.168.33.10:80
+    04/27-20:59:26.287752  [**] [1:10000003:3] Regla del http [**] [Priority: 0] {TCP} 192.168.33.1:53704 -> 192.168.33.10:80
+
+
+
+
+
 # 4. Regla para detectar que entran al admin 
 
+La siguiente regla detecta cuando alguien quiere entrar al administrador de una aplicación , esto es peligroso porque puede entrar a modificara o eliminar información.
+
     alert tcp any any -> $HOME_NET 80 (msg:" Entrando al admin"; content:"GET /admin"; sid:10000002; rev:002;)
+
+## Abre una nueva terminal en el equipo donde esta instalado snort
+
+Ejecuta el siguiente comando es para generar la página que python crea automáticamente, usaremos este sitio que acederemos por medio de una url que  no existe pero nos sirve para simular como sería en un entorno real, lo hacemos asi para que todos tengamos la oportunidad de probar
+
+    vagrant@ubuntu1804:~$ sudo python3 -m http.server --bind 0.0.0.0 80
+
+Para obtener la alerta en snort coloca la siguiente url en tu navegador.
+
+<p style="text-align : center;">
+
+<img src="./imagenes/2.jpg" style="center;"/>
+
+</p>
+
+__La ip cambiara, cada usuario debe colocar la ip pública de su interfaz de red que esta utilizando.__
+
+Si te aparece un error 404 en el navegador es normal no te asustes solo en estos momento estamos simulando la ip de un proyecto real.
+
+
+## Revisa la consola donde esta snort corriendo
+
+Como estamos accediendo a una página http y al la url /admin encontrara que concuerda con 2 reglas por lo tanto mostrara ambas alertas como las siguientes.
+
+   
+    04/28-03:02:50.877485  [**] [1:10000002:2]  Entrando al admin [**] [Priority: 0] {TCP} 192.168.33.1:55526 -> 192.168.33.10:80
+    04/28-03:02:50.877485  [**] [1:10000003:3] Regla del http [**] [Priority: 0] {TCP} 192.168.33.1:55526 -> 192.168.33.10:80
+
 
 
 # 5. Regla para detectar intruso en la base de datos.
 
+Esta regla es parecida a la anterior solo cambia el puerto que es 3306 este permite el acceso a la base de datos de alguna aplicación. Si algun intruso llega a entrar puede causar grandes daños.
+
     alert tcp any any -> $HOME_NET 3306 (msg:"Alguien intenta entrar a la base de datos"; sid:10000004;rev:004; )
 
+
+## Abre una nueva terminal en el equipo donde esta instalado snort
+
+Seguiremos usando la página que crean python de http por defecto. Para hacerla funcionar debes ejecutar el siguiente comando:
+
+
+    vagrant@ubuntu1804:~$ sudo python3 -m http.server --bind 0.0.0.0 80
+
+Enseguida coloca en tu navegador lo siguiente :
+<p style="text-align : center;">
+
+<img src="./imagenes/3.jpg" style="center;"/>
+
+</p>
+
+
+La alerta que te muestra es la siguente:
+
+    04/28-03:54:49.635069  [**] [1:10000004:4] Alguien intenta entrar a la base de datos [**] [Priority: 0] {TCP} 192.168.33.1:35532 -> 192.168.33.10:3306
+    04/28-03:54:49.866907  [**] [1:10000004:4] Alguien intenta entrar a la base de datos [**] [Priority: 0] {TCP} 192.168.33.1:35534 -> 192.168.33.10:3306
+    04/28-03:54:49.874529  [**] [1:10000004:4] Alguien intenta entrar a la base de datos [**] [Priority: 0] {TCP} 192.168.33.1:35536 -> 192.168.33.10:3306
 
 
 
