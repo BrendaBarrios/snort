@@ -4,6 +4,9 @@
 ## 1. Descarga en tu maquina el script <span style="color:blue">setup_conf.sh </span>  que se encuentra en este repositorio.
 
 
+[link a scrip setup_conf.sh](https://github.com/BrendaBarrios/snort/blob/master/Ejercicios_Practicos/setup_conf.sh)
+
+
 ## 2. Ubicate donde se encuentra el archivo que descargaste anteriormente y ejecuta lo siguiente.
 
 ### 2.1 Otorgaremos permisos para que se pueda ejecutar.
@@ -32,6 +35,8 @@ Se ejecutara el comando y cuando este listo aparecera un mensaje que diga termin
 
 ## 3. Descarga el  script <span style="color:blue"> conf_localRules.sh </span> que se encuentra en este repositorio.
 
+
+[link a scrip conf_localRules.sh](https://github.com/BrendaBarrios/snort/blob/master/Ejercicios_Practicos/conf_localRules.sh)
 
 ## 4. Ubicate donde se encuentra el archivo que descargaste anteriormente y ejecuta lo siguiente.
 
