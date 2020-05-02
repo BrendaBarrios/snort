@@ -1,3 +1,5 @@
+#!/bin/bash
+
 
 # Archivo de configuración para snort configurando 
 # el archivo conf.
