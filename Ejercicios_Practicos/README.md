@@ -3,6 +3,8 @@
 
 ## 1. Descarga en tu maquina el script <span style="color:blue">setup_conf.sh </span>  que se encuentra en este repositorio.
 
+    vagrant@ubuntu1804:~  wget https://raw.githubusercontent.com/BrendaBarrios/snort/master/Ejercicios_Practicos/setup_conf.sh
+
 
 [link a scrip setup_conf.sh](https://github.com/BrendaBarrios/snort/tree/master/Ejercicios_Practicos)
 
@@ -22,7 +24,7 @@
 
 ### 2.3 Colocaras la ip pública que esta en la interfaz de red que estamos usando.
 
-De la imterfaz de red usada localizaremos  la ip que aparece dentro de las características de la interfaz y recuerda generalmente comienzan con 192.168.x.x .
+De la interfaz de red usada localizaremos  la ip que aparece dentro de las características de la interfaz y recuerda generalmente comienzan con 192.168.x.x .
 
 
     vagrant@ubuntu1804:/vagrant_data$ ./setup_conf.sh
@@ -35,6 +37,7 @@ Se ejecutara el comando y cuando este listo aparecera un _mensaje que diga termi
 
 ## 3. Descarga el  script <span style="color:blue"> conf_localRules.sh </span> que se encuentra en este repositorio.
 
+    vagrant@ubuntu1804:~  wget https://raw.githubusercontent.com/BrendaBarrios/snort/master/Ejercicios_Practicos/local.rules.sh
 
 [link a scrip conf_localRules.sh](https://github.com/BrendaBarrios/snort/tree/master/Ejercicios_Practicos)
 
@@ -69,6 +72,7 @@ __IMPORTANTE__
 
 En el ejemplo anterior __eth1 va a cambiar dependiendo de la interfaz que utilices__ recuerda que es donde esta la ip pública(192.168.x.x)  que usamos.En caso contrario snort no detectara las reglas.
 
+Las reglas que estan en este script no son fijas cada usuario debe adecuarlas a sus necesidades.
 
 # Ejercicios 
 
@@ -78,8 +82,6 @@ __Debes tener ejecutando snort en consola, las reglas que se muestran ya las tie
 __Snort detecta una regla si coincide mandara una alerta a la consola de snort__
 
 # <span style="color:#0d47a1"> 1. Ping al servidor.</span>
-
-
 
 
 La siguiente instrucción detecta un ping desde una maquina externa hacia tu servidor o maquina.
@@ -93,6 +95,7 @@ Por ejemplo si en una maquina virtual tienes snort puedes abrir la terminal de t
     bodhi@yasmin:~$ ping 192.168.33.10
 
 _Tu deberas cambiar la ip pública por la que tu estas usando ,es decir la que utiliza en la interfaz de red que colocaste al momento de instalar snort._
+
 
 ## Revisa la terminal en la que tienes ejecutando snort para ver la alerta del ping.
 
@@ -149,6 +152,11 @@ Ejecuta el siguiente comando es para generar la página que python crea automát
 
 Una vez que ejecutas este comando podras verificar la página en tu navegador colocando tu ip pública y mostrara lo siguiente.
 
+Lo anterior es realizado cuando no estas usando una instancia .
+
+Cuando usas una instancia deberas habilitar los permisos en _security groups__
+
+
 <p style="text-align : center;">
 
 <img src="./imagenes/1.jpg" style="center;"/>
@@ -177,6 +185,11 @@ Ejecuta el siguiente comando es para generar la página que python crea automát
 
     vagrant@ubuntu1804:~$ sudo python3 -m http.server --bind 0.0.0.0 80
 
+Lo anterior es realizado cuando no estas usando una instancia.
+
+Cuando usas una instancia deberas habilitar los permisos en _security groups__.
+
+
 ## Para obtener la alerta en snort coloca la siguiente url en tu navegador.
 
 <p style="text-align : center;">
@@ -198,7 +211,7 @@ Como estamos accediendo a una página http y al la url /admin encontrara que con
     04/28-03:02:50.877485  [**] [1:10000002:2]  Entrando al admin [**] [Priority: 0] {TCP} 192.168.33.1:55526 -> 192.168.33.10:80
     04/28-03:02:50.877485  [**] [1:10000003:3] Regla del http [**] [Priority: 0] {TCP} 192.168.33.1:55526 -> 192.168.33.10:80
 
-
+Esta regla cambiara dependiendo del proyecto en el que se este trabajando, si lo realizas en una instancia debes cambiar el content por lo que tenga la petición GET de tu proyecto.Lo puedes checar inspeccionando el proyecto,enseguida te diriges a Network ,seleccionas admin en la lista de archivos que se envian por GET  y desplegara la información de esa petición en los Headers de peticiones busca lo que se esta enviando por get.
 
 
 # <span style="color:#0d47a1"> 5. Regla para detectar intruso en la base de datos.  </span>
@@ -216,6 +229,9 @@ Seguiremos usando la página que crean python de http por defecto. Para hacerla 
 
 
     vagrant@ubuntu1804:~$ sudo python3 -m http.server --bind 0.0.0.0 80
+
+
+Si estas en una instancia debes habilitar los puertos y cambiar los archivos de configuración de mysql.
 
 ## Enseguida coloca en tu navegador lo siguiente :
 

@@ -13,7 +13,7 @@ El acceso:instancia.pem cambiara por el nombre de la llave que tu utilizas al ig
 
 ## 1. Ejecutar el siguiente comando en la consola.
 
-Con este comando se configurara automáticamente los directorios y archivos necesario para el funcionamiento de la herramienta snort.
+Con el siguiente comando se configura automáticamente los directorios y archivos necesario para el funcionamiento de la herramienta snort.
 
 
     vagrant@ubuntu1804:~  sudo apt-get install snort 
