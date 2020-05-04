@@ -44,7 +44,7 @@ Es uno de los más usados y dispone de una gran cantidad de filtros o patrones y
 
 ## Elementos de Snort
 
-<img src="https://lh3.googleusercontent.com/proxy/H4Ssz4fcMUWhhdKeuFaLm3gvPXqAigg29Wg8HYcLumuW6FeC1hIuQ6679QS59N0wzwuNqSpQpsCfuXCqAeEkIS9Gjv60rWL4HKV2CIw" style="float:right;" height="300"/>
+<img src="./recursos/14.png" style="float:right;" height="300"/>
 
 
 El motor de Snort se divide en los siguientes componentes:
@@ -153,7 +153,7 @@ inspector de reglas.
 
 Seguidamente en las reglas que utilizaremos seran las siguinetes :
 
-• __msg__: Informa al motor de alerta que mensaje debe de mostrar. Los caracteres especiales
+• __msg__: Informa al motor de alerta que mensaje debe de mostrar. Los carácteres especiales
 de las reglas como : y ; deben de colocarse dentro de la opción msg con el carácter \.
 
 • __content__ : Permite que Snort realice una búsqueda sensitiva para un contenido específico
@@ -178,7 +178,7 @@ Dependiendo de las reglas utilizadas debes de importar adecuadamente la regla en
 
 Este archivo cuando es instalado snort contiene todos los plugins pero es recomendable solo dejar importado los que necesitas y borrar todos los demás includes porque podria dar errores al momento de ejecutar.
 
-Por este motivo para los ejercicios solo se dejaran los necesarios y para no borrar mnualmente utilizamos un script que eliminara lo que no necesitamos para la realización de la practica.
+Por este motivo para los ejercicios solo se dejaran los necesarios y para no borrar manualmente utilizamos un script que eliminara lo que no necesitamos para la realización de la practica.
 
 
 
@@ -230,6 +230,6 @@ En función de otras herramientas genera más funcionalidades por ejemplo en fun
 
 [link instalación snort ](https://brendabarrios.github.io/snort/instalacion/)             
 
-## Si quieres ir a la practica ve al siguiente link.   :
+## Si quieres ir a la práctica ve al siguiente link.   :
 
 [link ejercicios de snort ](https://brendabarrios.github.io/snort/Ejercicios_Practicos/) 
