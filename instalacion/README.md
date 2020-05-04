@@ -1,5 +1,15 @@
 # Instalación de snort en linux
 
+A continuación se presenta la instalación de snort si es en la instancia de amazon deberas ya tener el acceso a la instancia es decir se supone que ya estas dentro de tu instancia.
+
+## Entrar ala instancia de AWS
+
+Para entrar a la instancia deberas estar en el directorio que contenga la  llave que te da acceso a esa instancia en el caso de AWS es un archivo .pem.
+
+    sudo ssh -i acceso_instancia.pem  ubuntu@18.218.128.26
+
+El acceso:instancia.pem cambiara por el nombre de la llave que tu utilizas al igual que la ip pública que te da la instancia.
+
 
 ## 1. Ejecutar el siguiente comando en la consola.
 
@@ -74,20 +84,6 @@ Una vez que identifiques el nombre de la interfaz debes colocarlo en la pantalla
 
 ![ Imagen 4.Escribiendo rango de ip.](./imagenes/6.jpg) 
 
-## 7. Te preguntara si deseas resivir alertas a tu correo electrónico para enviar los logs de snort. Elige la opción YES.
-
-![ Imagen 5.Pantalla informativa para enviar logs.](./imagenes/7.jpg) 
-
-
-## 8. Coloca tu email.
-
-![ Imagen 6.Colocando email. ](./imagenes/8.jpg) 
-
-## 9. Preguntara el número de ocurrencias en las que te enviara el correo electrónico colocar 1.
-
-![ Imagen 7.Colocando ocurrencias. ](./imagenes/9.jpg) 
-
-
 
 # Comprobación de la instalación de snort
 
@@ -150,38 +146,3 @@ Te aparecera lo anterior que es el tráfico de la interfaz de red  y abajo te ap
 __Para cerrar snort presiona las teclas ctrl + c tardara un poco en cerrar.__
 
 Si te aparece lo anterior tu instalación ha sido exitosa :) .
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
