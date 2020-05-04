@@ -10,7 +10,7 @@
 
 ## ¿Qué es snort?
 
-Snort es un Sistema de Detección de Intrusos (IDS) basado en red (IDSN) open source.
+Snort es un Sistema de Detección de Intrusos (IDS) basado en red (IDSN) open source.Permite detectar intrusos por medio de la red.
 
 
 
@@ -208,7 +208,7 @@ __ACID :__ Consola web para visualizar los registros de Snort.
 
 ## Ventajas 
 
-<img src="https://img.stackshare.io/service/8365/_lJGY-m__400x400.jpg" style="float:left;"  height="250"/>
+<img src="https://img.stackshare.io/service/8365/_lJGY-m__400x400.jpg" style="float:right;"  height="250"/>
 
 
 * __Puede funcionar como sniffer__:
@@ -228,8 +228,8 @@ En función de otras herramientas genera más funcionalidades por ejemplo en fun
 ## Si quieres ver la instalación ve al siguiente link.
 
 
-[link instalación snort ](https://brendabarrios.github.io/snort/instalacion/)   :point_left: :+1: :smiley:           
+[link instalación snort ](https://brendabarrios.github.io/snort/instalacion/)             
 
 ## Si quieres ir a la practica ve al siguiente link.   :
 
-[link ejercicios de snort ](https://brendabarrios.github.io/snort/Ejercicios_Practicos/) :point_left: :+1: :smiley: 
+[link ejercicios de snort ](https://brendabarrios.github.io/snort/Ejercicios_Practicos/) 
